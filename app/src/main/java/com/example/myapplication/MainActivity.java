@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-        Button nxt_btn_id,nxt_btn_id2,next_btn_id3;
+        Button nxt_btn_id,nxt_btn_id2,next_btn_id3,next_btn_id4,next_btn_id5;
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,12 @@ protected void onCreate(Bundle savedInstanceState) {
         next_btn_id3 = findViewById(R.id.nxt_btn_id3);
         next_btn_id3.setOnClickListener(this);
 
+        next_btn_id4 = findViewById(R.id.nxt_btn_id4);
+        next_btn_id4.setOnClickListener(this);
+
+        next_btn_id5 = findViewById(R.id.nxt_btn_id5);
+        next_btn_id5.setOnClickListener(this);
+
 }
 
         @Override
@@ -43,6 +49,15 @@ public void onClick(View v) {
 
         case R.id.nxt_btn_id3:
                 startActivity(new Intent(MainActivity.this,PinLayout.class));
+                        break;
+
+
+                case R.id.nxt_btn_id4:
+                        startActivity(new Intent(MainActivity.this,LayoutScreen.class));
+                        break;
+
+                case R.id.nxt_btn_id5:
+                        startActivity(new Intent(MainActivity.this,LayoutScreen2.class));
                         break;
 
 
