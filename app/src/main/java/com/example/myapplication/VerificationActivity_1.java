@@ -49,6 +49,10 @@ public class VerificationActivity_1 extends AppCompatActivity {
                 if (s.toString().length() == 1) {
                     et2.requestFocus();
                 }
+
+                if (s.toString().length() == 0) {
+                    et1.requestFocus();
+                }
             }
         });
 
@@ -58,6 +62,9 @@ public class VerificationActivity_1 extends AppCompatActivity {
         et2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                if (s.toString().length() == 1) {
+                    et2.requestFocus();
+                }
 
             }
 
@@ -84,6 +91,9 @@ public class VerificationActivity_1 extends AppCompatActivity {
         et3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                if (s.toString().length() == 1) {
+                    et3.requestFocus();
+                }
 
             }
 
@@ -119,20 +129,40 @@ public class VerificationActivity_1 extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                if (s.toString().length() == 1){
+                  btread.requestFocus();
+                }
+
                 if (s.toString().length() == 0){
                     et3.requestFocus();
+//                    et3.setText("");
                 }
 
             }
         });
 
-        btread.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                code=v1+v2+v3+v4;
-                Log.e("", "Coding "+code );
-                Toast.makeText(VerificationActivity_1.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-                Toast.makeText(VerificationActivity_1.this, "OTP = "+code, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }}
+//        btread.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                code=v1+v2+v3+v4;
+//                Log.e("", "Coding "+code );
+//                Toast.makeText(VerificationActivity_1.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(VerificationActivity_1.this, "OTP = "+code, Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+
+
+    }
+
+    public void submit(View view){
+
+
+        code=v1+v2+v3+v4;
+        Log.e("", "Coding "+code );
+        Toast.makeText(VerificationActivity_1.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+        Toast.makeText(VerificationActivity_1.this, "OTP = "+code, Toast.LENGTH_SHORT).show();
+
+
+    }
+}

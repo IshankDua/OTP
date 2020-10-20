@@ -101,7 +101,8 @@
                 android:maxLength="1"
                 android:layout_marginRight="8dp"
                 android:digits="1234567890"
-                android:background="@color/clr_grey_text_transparent"/>
+                android:background="@color/clr_grey_text_transparent"
+                />
 
             <EditText
                 android:id="@+id/et_4"
@@ -128,6 +129,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btread"
             android:text="Submit"
+            android:onClick="submit"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"/>
 
